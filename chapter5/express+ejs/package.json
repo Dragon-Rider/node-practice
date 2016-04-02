@@ -1,0 +1,26 @@
+{
+  "name": "practice-ejs",
+  "version": "1.0.0",
+  "description": "practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jianghuan",
+  "license": "MIT",
+   "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+  	"body-parser": "^1.5.2",
+    "errorhandler": "^1.1.1",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+ 	  "express-session": "^1.7.2",
+    "jade": "^1.5.0",
+    "method-override": "^2.1.2",
+    "morgan": "^1.2.2",
+    "multer": "^0.1.3",
+    "serve-favicon": "^2.0.1"
+  }
+}
