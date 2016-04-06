@@ -1,24 +1,20 @@
 var http = require('http'),
-	ejs = require('ejs'),
 	fs = require('fs'),
 	express = require('express'),
-	routes = require('./routes'),
+	Route = require('./routes'),
+	routes = new Route(),    //需要实例化返回的对象，才能调用实例里的函数
 	app = express(),
 	bodyParser = require('body-parser'),
 	methodOverride = require('method-override'),
 	errorHandler = require('errorhandler'),
 	util = require('util');
 
-/*//ejs   读取ejs模版，并将模版和数据拼在一起
+/*读取ejs模版，并将模版和数据拼在一起
 str = fs.readFileSync(__dirname + '/views/index.ejs', 'utf8');
-
-//绝对路径
-//console.log(__dirname) 
 var ret = ejs.render(str, {
 	names: ['foo', 'bar', 'baz'],
 	title: "Eragon"
 });
-
 console.log(ret);*/
 
 //读取文件夹html的目录
@@ -34,6 +30,7 @@ app.set('view engine', 'ejs');
 
 app.use(bodyParser.json());
 app.use(methodOverride());
+
 //配置静态文件服务器
 app.use(express.static(__dirname + '/public'));
 
